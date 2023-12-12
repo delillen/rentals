@@ -1,0 +1,9 @@
+<h1>Listings</h1>
+
+<ul>
+  <% @listings.each do |listing| %>
+    <li>Appartement n°<%= listing.id %></li>
+    <li><%= link_to "Appartement n° #{listing.id}", listing_path(listing) %></li>
+    <li>Nombre de chambres : <%= listing.num_rooms %></li>
+  <% end %>
+</ul>
